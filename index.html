@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Homepage | Kota Bandung</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            border: 1px solid red;
+        } */
+
+        body,
+        html {
+            font-family: 'Open Sans', sans-serif;
+            height: 100%;
+            padding: 0 16px;
+            z-index: 0;
+
+        }
+
+        h1 {
+            font-weight: 800px;
+        }
+
+        p {
+            font-weight: 700px;
+        }
+
+        /* navbar-style */
+        nav {
+            z-index: 1;
+        }
+
+
+
+        ul {
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        li {
+            display: inline-block;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            text-align: center;
+        }
+
+        /* header */
+        .hero-image {
+            background-image: url(img/gedung-sate.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .hero-image-2 {
+            background-image: url(img/gedung-sate2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .hero-text {
+            display: block;
+            position: absolute;
+            text-align: left;
+            padding: 10%;
+            padding-top: 20%;
+        }
+
+        .hero-text p {
+            color: #ffee00;
+            font-weight: bold;
+            font-size: 21px;
+            line-height: 29px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero-text h1 {
+            color: #fff;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 66px;
+
+        }
+
+        button {
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700px;
+            color: #fff;
+            background-color: #FFC700;
+            border-radius: 10px;
+            margin-top: 2%;
+        }
+
+        /* section1 */
+        .gambar-section {
+            display: flex;
+            padding: 0;
+            padding-top: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav style="text-align: right;" id="navbar">
+        <ul>
+            <li style="float: left;"><img src="img/logo-kota.png" alt="" width="200px">
+            </li>
+            <li><a href="#Beranda">Beranda</a></li>
+            <li><a href="#Tentang">Tentang</a></li>
+            <li><a href="#Fitur">Fitur</a></li>
+        </ul>
+    </nav>
+    <!-- header -->
+    <header>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>SELAMAT DATANG DI KOTA BANDUNG</h1>
+                <p>"Saat-saat yang kami habiskan bersamamu selalu penuh dengan sukacita dan kebahagiaan. Mengetahui
+                    bahwa kamu akan bersama kami, membuat kami tersenyum. Selamat datang di rumah kami!"</p>
+                <button>selengkapnya</button>
+            </div>
+        </div>
+    </header>
+    <!-- content1 -->
+    <section>
+
+        <div class="hero-image-2">
+            <h1 align="center" style="padding-top: 50px;">Kesenian Sunda</h1>
+            <div class="gambar-section">
+
+                <!-- gambar1 -->
+                <div style="width: 50%;">
+                    <img src="img/wayang.png" alt="">
+                    <p>Wayang Golek merupakan salah satu dari ragam kesenian wayang, yang berasal dari masyarakat Sunda
+                        di
+                        Jawa Barat & Banten. Pertunjukan seni wayang golek merupakan seni pertunjukan teater rakyat yang
+                        banyak dipagelarkan. Wikipedia</p>
+                </div>
+                <!-- gambar2 -->
+                <div style="width: 50%;" align="right">
+                    <img src="img/jaipong.png" alt="">
+                    <p>Jaipongan adalah sebuah jenis tari pergaulan tradisional masyarakat Sunda yang berasal dari
+                        wilayah Karawang dan sangat populer di Indonesia. Wikipedia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- js -->
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>
