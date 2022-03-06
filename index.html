@@ -9,21 +9,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- icon page -->
+    <link rel="icon" href="img/kota-bandung.png" type="image/x-icon">
     <title>Homepage | Kota Bandung</title>
     <style>
-        /* * {
+        * {
             margin: 0;
             padding: 0;
-            border: 1px solid red;
-        } */
+            /* border: 1px solid red; */
+        }
 
         body,
         html {
             font-family: 'Open Sans', sans-serif;
             height: 100%;
-            padding: 0 16px;
+            padding: 16px;
             z-index: 0;
 
+        }
+
+        /* HTML Links - Different Colors  */
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: grey;
+        }
+
+        a:hover {
+            color: #ffee00;
+        }
+
+        a:active {
+            color: Green;
         }
 
         h1 {
@@ -31,12 +50,15 @@
         }
 
         p {
-            font-weight: 700px;
+            font-weight: bold;
         }
 
         /* navbar-style */
         nav {
             z-index: 1;
+            position: fixed;
+            top: 0;
+            width: 96%;
         }
 
 
@@ -61,12 +83,6 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-        }
-
-        .sticky {
-            position: fixed;
-            top: 0;
-            text-align: center;
         }
 
         /* header */
@@ -114,11 +130,16 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            font-weight: 700px;
             color: #fff;
             background-color: #FFC700;
             border-radius: 10px;
+            outline: none;
             margin-top: 2%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        button:hover {
+            background-color: #e7b500;
         }
 
         /* section1 */
@@ -127,6 +148,31 @@
             padding: 0;
             padding-top: 10%;
         }
+
+        /* table */
+        td,
+        th {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #FFC700;
+        }
+
+        /* reveal effect */
+        .reveal {
+            position: relative;
+            transform: translateY(150px);
+            opacity: 0;
+            transition: 2s all ease;
+        }
+
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -134,9 +180,9 @@
     <!-- navbar -->
     <nav style="text-align: right;" id="navbar">
         <ul>
-            <li style="float: left;"><img src="img/logo-kota.png" alt="" width="200px">
+            <li style="float: left;"><a href="#" target="_self"><img src="img/logo-kota.png" alt="" width="150px"></a>
             </li>
-            <li><a href="#Beranda">Beranda</a></li>
+            <li><a href=" #Beranda">Beranda</a></li>
             <li><a href="#Tentang">Tentang</a></li>
             <li><a href="#Fitur">Fitur</a></li>
         </ul>
@@ -144,19 +190,18 @@
     <!-- header -->
     <header>
         <div class="hero-image">
-            <div class="hero-text">
+            <div class="hero-text reveal">
                 <h1>SELAMAT DATANG DI KOTA BANDUNG</h1>
                 <p>"Saat-saat yang kami habiskan bersamamu selalu penuh dengan sukacita dan kebahagiaan. Mengetahui
                     bahwa kamu akan bersama kami, membuat kami tersenyum. Selamat datang di rumah kami!"</p>
-                <button>selengkapnya</button>
+                <a href="https://www.bandung.go.id/" target="_blank"><button type="submit">selengkapnya</button></a>
             </div>
         </div>
     </header>
     <!-- content1 -->
     <section>
-
-        <div class="hero-image-2">
-            <h1 align="center" style="padding-top: 50px;">Kesenian Sunda</h1>
+        <div class="hero-image-2 reveal">
+            <h1 align="center" style="font-size:36px;padding-top: 50px;">Kesenian Sunda</h1>
             <div class="gambar-section">
 
                 <!-- gambar1 -->
@@ -165,32 +210,134 @@
                     <p>Wayang Golek merupakan salah satu dari ragam kesenian wayang, yang berasal dari masyarakat Sunda
                         di
                         Jawa Barat & Banten. Pertunjukan seni wayang golek merupakan seni pertunjukan teater rakyat yang
-                        banyak dipagelarkan. Wikipedia</p>
+                        banyak dipagelarkan. <a href="https://id.wikipedia.org/wiki/Wayang_golek"
+                            target="_blank">Wikipedia</a>
+                    </p>
                 </div>
                 <!-- gambar2 -->
                 <div style="width: 50%;" align="right">
                     <img src="img/jaipong.png" alt="">
                     <p>Jaipongan adalah sebuah jenis tari pergaulan tradisional masyarakat Sunda yang berasal dari
-                        wilayah Karawang dan sangat populer di Indonesia. Wikipedia</p>
+                        wilayah Karawang dan sangat populer di Indonesia. <a
+                            href="https://en.wikipedia.org/wiki/Jaipongan" target="_blank">Wikipedia</a></p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- content2 -->
+    <!-- Image Maps -->
+    <section>
+        <div style="margin: 20px;" align="center" class="reveal">
+            <h1 style="font-size:36px;padding-top: 20px;">Makanan Sunda</h1>
+
+            <!-- Image Map Generated by https://www.image-maps.com/ -->
+            <img id="Image-Maps-Com-image-maps-2022-03-05-045922" src="img/makanan.png" border="0" width="1200"
+                height="681" orgWidth="1310" orgHeight="681" usemap="#image-maps-2022-03-05-045922" alt="" />
+            <map name="image-maps-2022-03-05-045922" id="ImageMapsCom-image-maps-2022-03-05-045922">
+                <area alt="batagor" title="Batagor"
+                    href="https://www.google.com/search?q=batagor+bandung&amp;oq=batagor+bandung&amp;aqs=edge..69i57j0i20i263i512j0i512l6j69i64.5431j0j1&amp;sourceid=chrome&amp;ie=UTF-8"
+                    shape="rect" coords="0,0,433,339" style="outline:none;" target="_blank" />
+                <area alt="surabi" title="Surabi" href="https://keluyuran.com/surabi-enak-di-bandung/" shape="rect"
+                    coords="439,0,872,339" style="outline:none;" target="_blank" />
+                <area alt="nasi bakar" title="Nasi Bakar"
+                    href="https://www.idntimes.com/food/dining-guide/sinta-listiyana-2/5-rekomendasi-nasi-bakar-paling-enak-di-bandung-maknyus-banget-exp-c1c2"
+                    shape="rect" coords="876,0,1310,339" style="outline:none;" target="_blank" />
+                <area alt="gepuk" title="Gepuk"
+                    href="https://www.ayobandung.com/kuliner/pr-79703699/oleh-oleh-bandung-gepuk-enak-dan-legendaris"
+                    shape="rect" coords="0,345,434,681" style="outline:none;" target="_blank" />
+                <area alt="mie kocok" title="Mie kocok"
+                    href="https://travel.kompas.com/read/2017/11/19/130500227/5-mie-kocok-legendaris-di-bandung?page=all"
+                    shape="rect" coords="438,343,877,681" style="outline:none;" target="_blank" />
+                <area alt="lotek" title="lotek"
+                    href="https://www.idntimes.com/food/dining-guide/ranggana/lotek-enak-di-bandung-salad-khas-sunda-c1c2"
+                    shape="rect" coords="877,344,1310,681" style="outline:none;" target="_blank" />
+                <area shape="rect" coords="1308,679,1310,681" alt="Image Map" style="outline:none;" title="Image Map"
+                    href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+            </map>
+        </div>
+    </section>
+
+    <!-- content3 -->
+    <!-- iframe -->
+    <section class="reveal">
+        <div style="margin: 20px;" align="center">
+            <h1 style="font-size:36px;padding-top: 20px;">Masjid Agung Bandung</h1>
+        </div>
+        <div style="display: flex;">
+            <div>
+                <iframe src="http://dirgantaraaiatravel.com/sudah-tahu-sejarah-masjid-raya-bandung-detail-405510"
+                    frameborder="0" width="600px" height="600px"></iframe>
+            </div>
+            <div><img src="img/masjid-agung.png" alt=""></div>
+        </div>
+        <!-- table -->
+        <div style="margin: 20px;" align="center">
+            <h1 style="font-size:20px;padding-top: 20px;">Jumlah pengunjung masjid agung</h1>
+            <div>
+                <table style="width: 100%;border: 2px solid black;">
+                    <tr>
+                        <th>Bulan</th>
+                        <th>2014</th>
+                        <th>2016</th>
+                        <th>2018</th>
+                    </tr>
+                    <tr>
+                        <td>Januari</td>
+                        <td>5110</td>
+                        <td>2975</td>
+                        <td>3872</td>
+                    </tr>
+                    <tr>
+                        <td>Februari</td>
+                        <td>2512</td>
+                        <td>2980</td>
+                        <td>4388</td>
+                    </tr>
+                    <tr>
+                        <td>Maret</td>
+                        <td>3241</td>
+                        <td>3330</td>
+                        <td>3812</td>
+                    </tr>
+                </table>
+                <p>Untuk tabel selengkapnya bisa <a
+                        href="https://bandungkota.bps.go.id/indicator/16/123/1/jumlah-pengunjung-menara-masjid-raya-jawa-barat.html"
+                        target="_blank">klik disini</a></p>
+            </div>
+    </section>
+    <!-- foooter -->
+    <footer>
+        <div style="background-color: #41363D; display: flex;">
+
+            <img src="img/big-logo.png" alt="">
+            <div align="center" style="color:white;margin-top: 20px;">
+                <h1>Rama Sanjaya</h1>
+                <h2>2022</h2>
+            </div>
+        </div>
+
+    </footer>
+
     <!-- js -->
     <script>
-        window.onscroll = function () {
-            myFunction()
-        };
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
+        // reveal effect
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
 
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
             }
         }
+
+        window.addEventListener("scroll", reveal);
     </script>
 </body>
 
